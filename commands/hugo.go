@@ -334,6 +334,8 @@ func InitializeConfig(subCmdVs ...*cobra.Command) error {
 	}
 
 	viper.RegisterAlias("indexes", "taxonomies")
+        viper.SetEnvPrefix("hugo")
+        viper.AutomaticEnv()
 
 	loadDefaultSettings()
 
